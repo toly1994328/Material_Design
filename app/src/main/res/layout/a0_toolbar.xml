@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.v7.widget.Toolbar
+
+        android:id="@+id/my_tb"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="@dimen/dp_48"
+        android:background="@color/yase"
+        android:elevation="@dimen/dp_4"
+        app:logo="@drawable/icon_love"
+        app:navigationIcon="@drawable/icon_a"
+        app:subtitle="天下无双"
+        app:title="捷特">
+    </android.support.v7.widget.Toolbar>
+
+
+    <android.support.v7.widget.Toolbar
+        android:layout_marginTop="@dimen/dp_32"
+        android:background="@color/zhuqing"
+        android:id="@+id/my_tb2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="捷特"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/my_tb">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:scaleType="centerCrop"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/menu_bg"/>
+    </android.support.v7.widget.Toolbar>
+
+</android.support.constraint.ConstraintLayout>

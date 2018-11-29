@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--自定义进度条-->
+    <declare-styleable name="TolyProgressBar">
+        <!--进度条相关-->
+        <!--背景色-->
+        <attr name="z_pb_bg_color" format="color"/>
+        <!--背景高-->
+        <attr name="z_pb_bg_height" format="dimension"/>
+        <!--进度色-->
+        <attr name="z_pb_on_color" format="color"/>
+        <!--进度高-->
+        <attr name="z_pb_on_height" format="dimension"/>
+        <!--文本相关-->
+        <!--文字颜色-->
+        <attr name="z_pb_txt_color" format="color"/>
+        <!--文字大小-->
+        <attr name="z_pb_txt_size" format="dimension"/>
+        <!--文字两边的空距-->
+        <attr name="z_pb_txt_offset" format="dimension"/>
+        <!--文字是否消失-->
+        <attr name="z_pb_txt_gone" format="boolean"/>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,46 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="ksw_md_thumb_ripple_size">42dp</dimen>
+    <dimen name="ksw_md_thumb_solid_inset">11dp</dimen>
+    <dimen name="ksw_md_thumb_shadow_inset">11dp</dimen>
+    <dimen name="ksw_md_thumb_shadow_inset_top">11dp</dimen>
+    <dimen name="ksw_md_thumb_shadow_inset_bottom">10dp</dimen>
+
+    <dimen name="ksw_md_thumb_solid_size">20dp</dimen>
+    <dimen name="ksw_md_thumb_shadow_size">21dp</dimen>
+    <dimen name="ksw_md_thumb_shadow_offset">2dp</dimen>
+    <!--a11-->
+    <dimen name="game_over_text_size">40sp</dimen>
+    <dimen name="restart_btn_text_size">25sp</dimen>
+    <!--A7-->
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="width">160dp</dimen>
+    <!--A8-->
+    <dimen name="margin">16dp</dimen>
+    <dimen name="sliderWidth">36dp</dimen> <!--Matches checker pattern-->
+    <dimen name="preference_thumbnail_size">48dp</dimen>
+
+
+    <dimen name="dp_2">2dp</dimen>
+    <dimen name="dp_4">4dp</dimen>
+    <dimen name="dp_8">8dp</dimen>
+    <dimen name="dp_16">16dp</dimen>
+    <dimen name="dp_24">24dp</dimen>
+    <dimen name="dp_32">32dp</dimen>
+    <dimen name="dp_48">48dp</dimen>
+    <dimen name="dp_56">56dp</dimen>
+    <dimen name="dp_64">64dp</dimen>
+    <dimen name="dp_72">72dp</dimen>
+    <dimen name="dp_88">88dp</dimen>
+    <dimen name="dp_200">200dp</dimen>
+
+    <dimen name="sp_12">12sp</dimen>
+    <dimen name="sp_14">14sp</dimen>
+    <dimen name="sp_16">16sp</dimen>
+    <dimen name="sp_18">18sp</dimen>
+
+    <dimen name="px_1">1px</dimen>
+
+</resources>

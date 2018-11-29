@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--cardView常用配置-->
+    <style name="MyBaseCard" parent="@style/CardView.Light">
+        <item name="cardPreventCornerOverlap">false</item>
+        <item name="cardUseCompatPadding">true</item>
+        <item name="cardCornerRadius">6dp</item>
+
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="cardBackgroundColor">#A0BDF4</item>
+    </style>
+
+    <!--测试用的TextView通用属性-->
+    <style name="TVTestCenter">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:text">Test-测试文字</item>
+        <item name="android:background">#6096F3</item>
+        <item name="android:textColor">#fff</item>
+    </style>
+
+
+</resources>

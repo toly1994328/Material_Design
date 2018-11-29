@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.toly1994.vvi_mds">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".v01_tab.V01_TabLayoutActivity">
+
+        </activity>
+
+
+        <activity android:name=".v02_card.V02_CardViewActivity">
+
+        </activity>
+
+        <!--<activity android:name=".v02_card.V02_CardPomeActivity">-->
+
+        <!--</activity>-->
+
+        <activity
+            android:name=".v03_palette.V02_PaletteActivity"
+            android:theme="@style/TranslucentTheme">
+        </activity>
+
+        <activity
+            android:name=".app.home.HomeActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".ac.V03_ACActivity"/>
+        <activity android:name=".v00_toolbar.V00_ToolBarActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        </activity>
+        <activity android:name=".v04_behavior.V04_BehaviorActivity"/>
+        <activity android:name=".fab_sna.FabSnaBsX3Activity"/>
+    </application>
+
+</manifest>
