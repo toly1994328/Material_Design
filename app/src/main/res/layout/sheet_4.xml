@@ -11,6 +11,7 @@
     app:layout_behavior="@string/bottom_sheet_behavior">
 
     <ImageView
+        android:id="@+id/id_tv_anchor"
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:layout_gravity="center"

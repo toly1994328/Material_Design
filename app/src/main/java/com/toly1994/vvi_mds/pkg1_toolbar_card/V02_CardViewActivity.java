@@ -1,4 +1,4 @@
-package com.toly1994.vvi_mds.v02_card;
+package com.toly1994.vvi_mds.pkg1_toolbar_card;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

@@ -11,13 +11,15 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.toly1994.vvi_mds.R;
-import com.toly1994.vvi_mds.ac.V03_ACActivity;
-import com.toly1994.vvi_mds.fab_sna.FabSnaBsX3Activity;
-import com.toly1994.vvi_mds.v00_toolbar.V00_ToolBarActivity;
-import com.toly1994.vvi_mds.v01_tab.V01_TabLayoutActivity;
-import com.toly1994.vvi_mds.v02_card.V02_CardViewActivity;
-import com.toly1994.vvi_mds.v03_palette.V02_PaletteActivity;
-import com.toly1994.vvi_mds.v04_behavior.V04_BehaviorActivity;
+import com.toly1994.vvi_mds.pkg1_toolbar_card.V01_ToolBarActivity;
+import com.toly1994.vvi_mds.pkg1_toolbar_card.V02_CardViewActivity;
+import com.toly1994.vvi_mds.pkg2_fab_sna_sheet.V03_FabSnaBsX3Activity;
+import com.toly1994.vvi_mds.pkg3_bnb_tab.V04_BottomNavigationBarActivity;
+import com.toly1994.vvi_mds.pkg3_bnb_tab.V05_TabLayoutActivity;
+import com.toly1994.vvi_mds.pkg4_app_coo.V06_ACActivity;
+import com.toly1994.vvi_mds.pkg5_coll_palette.V07_CollapsingPaletteActivity;
+import com.toly1994.vvi_mds.pkg6_drawer_nav_input.V08_DrawerNavigationTextInputActivity;
+import com.toly1994.vvi_mds.pkg7_behavior.V09_BehaviorActivity;
 
 import java.util.List;
 
@@ -46,25 +48,31 @@ public class HomeRVAdapter extends RecyclerView.Adapter<HomeRVAdapter.MyViewHold
             public void onClick(View v) {
                 switch (position) {
                     case 0:
-                        mContext.startActivity(new Intent(mContext, V00_ToolBarActivity.class));
+                        mContext.startActivity(new Intent(mContext, V01_ToolBarActivity.class));
                         break;
                     case 1:
-                        mContext.startActivity(new Intent(mContext, V01_TabLayoutActivity.class));
-                        break;
-                    case 2:
                         mContext.startActivity(new Intent(mContext, V02_CardViewActivity.class));
                         break;
+                    case 2:
+                        mContext.startActivity(new Intent(mContext, V03_FabSnaBsX3Activity.class));
+                        break;
                     case 3:
-                        mContext.startActivity(new Intent(mContext, V03_ACActivity.class));
+                        mContext.startActivity(new Intent(mContext, V04_BottomNavigationBarActivity.class));
                         break;
                     case 4:
-                        mContext.startActivity(new Intent(mContext, V02_PaletteActivity.class));
+                        mContext.startActivity(new Intent(mContext, V05_TabLayoutActivity.class));
                         break;
                     case 5:
-                        mContext.startActivity(new Intent(mContext, V04_BehaviorActivity.class));
+                        mContext.startActivity(new Intent(mContext, V06_ACActivity.class));
                         break;
                     case 6:
-                        mContext.startActivity(new Intent(mContext, FabSnaBsX3Activity.class));
+                        mContext.startActivity(new Intent(mContext, V07_CollapsingPaletteActivity.class));
+                        break;
+                    case 7:
+                        mContext.startActivity(new Intent(mContext, V08_DrawerNavigationTextInputActivity.class));
+                        break;
+                    case 8:
+                        mContext.startActivity(new Intent(mContext, V09_BehaviorActivity.class));
                         break;
                 }
             }

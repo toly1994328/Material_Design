@@ -9,12 +9,12 @@
         app:showAsAction="always"/>
 
     <item
-        android:id="@+id/tab_mode_fixed"
+        android:id="@+id/menu_tab_a"
         android:title="MODE_FIXED"
         app:showAsAction="never"/>
 
     <item
-        android:id="@+id/tab_mode_scrollable"
+        android:id="@+id/menu_tab_b"
         android:title="MODE_SCROLLABLE"
         app:showAsAction="never"/>
 

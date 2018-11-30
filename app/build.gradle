@@ -34,6 +34,6 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:design:27.1.1'
     implementation 'com.android.support:cardview-v7:27.1.1'
-
+    implementation 'com.ashokvarma.android:bottom-navigation-bar:1.2.0'
     implementation project(':test')
 }

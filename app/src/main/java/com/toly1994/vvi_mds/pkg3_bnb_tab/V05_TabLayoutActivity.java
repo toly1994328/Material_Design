@@ -1,4 +1,4 @@
-package com.toly1994.vvi_mds.v01_tab;
+package com.toly1994.vvi_mds.pkg3_bnb_tab;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -20,7 +20,7 @@ import com.toly1994.vvi_mds.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class V01_TabLayoutActivity extends AppCompatActivity {
+public class V05_TabLayoutActivity extends AppCompatActivity {
 
     private TabLayout mTabTl;
     private ViewPager mContentVp;
@@ -70,7 +70,7 @@ public class V01_TabLayoutActivity extends AppCompatActivity {
         tabIndicators = DataUtils.getRandomName(5, true);
         tabFragments = new ArrayList<>();
         for (String s : tabIndicators) {
-            tabFragments.add(V01_ContentV4Fragment.newInstance(s));
+            tabFragments.add(V05_ContentV4Fragment.newInstance(s));
         }
         //创建适配器对象
         contentAdapter = new FragmentPagerAdapter(getSupportFragmentManager()) {
@@ -126,17 +126,17 @@ public class V01_TabLayoutActivity extends AppCompatActivity {
                 //创建随机名字
                 String addName = ZRandom.randomCnName();
                 //Fragment集合增加
-                tabFragments.add(V01_ContentV4Fragment.newInstance(addName));
+                tabFragments.add(V05_ContentV4Fragment.newInstance(addName));
                 //刷新，
                 contentAdapter.notifyDataSetChanged();
                 mTabTl.setupWithViewPager(mContentVp);
                 return true;
 
-            case R.id.tab_mode_fixed:
+            case R.id.menu_tab_a:
                 mTabTl.setTabMode(TabLayout.MODE_FIXED);
                 return true;
 
-            case R.id.tab_mode_scrollable:
+            case R.id.menu_tab_b:
                 mTabTl.setTabMode(TabLayout.MODE_SCROLLABLE);
                 break;
         }

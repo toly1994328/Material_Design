@@ -3,7 +3,9 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="colorDefaultText">#8B8B8B</color>
+
+
+    <color name="colorDefaultText">#5C5C5C</color>
     <color name="colorDefaultSubText">#BFBFBF</color>
 
     <!--妃色-->
@@ -19,6 +21,4 @@
     <color name="pincheng">#FF7F47</color>
     <!--捷特蓝-->
     <color name="jietelan">#C8D5F7</color>
-
-
 </resources>

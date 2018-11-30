@@ -1,4 +1,4 @@
-package com.toly1994.vvi_mds.ac;
+package com.toly1994.vvi_mds.pkg4_app_coo;
 
 import android.content.Context;
 import android.support.annotation.NonNull;

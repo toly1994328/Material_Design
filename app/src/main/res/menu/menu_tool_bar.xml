@@ -9,13 +9,14 @@
         app:showAsAction="always"/>
 
     <item
-        android:id="@+id/tab_mode_fixed"
-        android:title="MODE_FIXED"
+        android:id="@+id/tab_about"
+        android:title="about"
+        android:icon="@drawable/icon_a"
         app:showAsAction="never"/>
 
     <item
-        android:id="@+id/tab_mode_scrollable"
-        android:title="MODE_SCROLLABLE"
+        android:id="@+id/tab_before"
+        android:icon="@drawable/icon_b"
+        android:title="before"
         app:showAsAction="never"/>
-
 </menu>

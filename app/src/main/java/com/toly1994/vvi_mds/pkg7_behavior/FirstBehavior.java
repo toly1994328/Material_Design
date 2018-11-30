@@ -1,4 +1,4 @@
-package com.toly1994.vvi_mds.v04_behavior;
+package com.toly1994.vvi_mds.pkg7_behavior;
 
 import android.content.Context;
 import android.support.design.widget.AppBarLayout;
@@ -47,7 +47,6 @@ public class FirstBehavior extends CoordinatorLayout.Behavior<View> {
     public boolean onDependentViewChanged(CoordinatorLayout parent, View child, View dependency) {
 
         float dy = dependency.getTop() - curY; //dy>0 ----下移
-
 
         float faction;//移动的分度值
         if (dy <= 0) {//上移动

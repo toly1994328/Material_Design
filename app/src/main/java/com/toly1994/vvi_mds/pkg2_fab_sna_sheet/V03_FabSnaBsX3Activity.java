@@ -1,4 +1,4 @@
-package com.toly1994.vvi_mds.fab_sna;
+package com.toly1994.vvi_mds.pkg2_fab_sna_sheet;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -9,6 +9,8 @@ import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,13 +18,15 @@ import android.widget.LinearLayout;
 
 import com.toly1994.test.L;
 import com.toly1994.test.ToastUtil;
+import com.toly1994.test.common.DataUtils;
 import com.toly1994.vvi_mds.R;
+import com.toly1994.vvi_mds.pkg4_app_coo.ACAdapter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
-public class FabSnaBsX3Activity extends AppCompatActivity {
+public class V03_FabSnaBsX3Activity extends AppCompatActivity {
 
     @BindView(R.id.fab)
     FloatingActionButton mFab;
@@ -30,6 +34,8 @@ public class FabSnaBsX3Activity extends AppCompatActivity {
     CoordinatorLayout mClRoot;
     @BindView(R.id.bottom_sheet)
     LinearLayout mBottomSheet;
+    @BindView(R.id.id_rv_fab)
+    RecyclerView mIdRvFab;
     private BottomSheetBehavior<LinearLayout> mBottomSheetBehavior;
 
     private boolean isOpen;
@@ -45,7 +51,7 @@ public class FabSnaBsX3Activity extends AppCompatActivity {
         mBottomSheetBehavior.setBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
             @Override
             public void onStateChanged(@NonNull View bottomSheet, int newState) {
-                ToastUtil.showAtOnce(FabSnaBsX3Activity.this, "newState:" + newState);
+                ToastUtil.showAtOnce(V03_FabSnaBsX3Activity.this, "newState:" + newState);
             }
 
             @Override
@@ -54,16 +60,28 @@ public class FabSnaBsX3Activity extends AppCompatActivity {
             }
         });
 
-
         mFab.setOnClickListener(v -> {
 //            playBottomSheet();
 //            playBottomSheetDialog();
             new MyBSDFragment().show(getSupportFragmentManager(), "toly");
-            showSnackbar();
+            showSnackBar();
         });
 
+        rvInit();
     }
 
+    /**
+     * 使用RecyclerView
+     */
+    private void rvInit() {
+        ACAdapter ACAdapter = new ACAdapter(this, DataUtils.getRandomName(40, true));
+        mIdRvFab.setAdapter(ACAdapter);
+        mIdRvFab.setLayoutManager(new LinearLayoutManager(this));
+    }
+
+    /**
+     * 使用BottomSheetDialog
+     */
     private void playBottomSheetDialog() {
         mBottomSheetDialog = new BottomSheetDialog(this);
         mBottomSheetDialog.setContentView(R.layout.a_pome_item);
@@ -71,6 +89,9 @@ public class FabSnaBsX3Activity extends AppCompatActivity {
     }
 
 
+    /**
+     * 使用BottomSheet
+     */
     private void playBottomSheet() {
         if (isOpen) {
             mBottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
@@ -80,7 +101,10 @@ public class FabSnaBsX3Activity extends AppCompatActivity {
         isOpen = !isOpen;
     }
 
-    private void showSnackbar() {
+    /**
+     * 使用SnackBar
+     */
+    private void showSnackBar() {
         Snackbar snackbar = Snackbar.make(mClRoot, "Hello Snack", Snackbar.LENGTH_LONG);
         ViewGroup view = (ViewGroup) snackbar.getView();
         view.setBackgroundColor(0xffffffff);

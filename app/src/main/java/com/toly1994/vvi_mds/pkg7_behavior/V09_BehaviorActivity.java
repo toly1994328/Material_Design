@@ -1,4 +1,4 @@
-package com.toly1994.vvi_mds.v04_behavior;
+package com.toly1994.vvi_mds.pkg7_behavior;
 
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
@@ -9,12 +9,12 @@ import android.widget.TextView;
 
 import com.toly1994.test.common.DataUtils;
 import com.toly1994.vvi_mds.R;
-import com.toly1994.vvi_mds.ac.ACAdapter;
+import com.toly1994.vvi_mds.pkg4_app_coo.ACAdapter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class V04_BehaviorActivity extends AppCompatActivity {
+public class V09_BehaviorActivity extends AppCompatActivity {
 
     @BindView(R.id.abl_top)
     AppBarLayout mAlTitle;

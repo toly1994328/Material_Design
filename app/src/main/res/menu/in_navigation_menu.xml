@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/group1">
+        <item
+            android:id="@+id/icon_a"
+            android:icon="@drawable/icon_a"
+            android:title="about"/>
+        <item
+            android:id="@+id/icon_b"
+            android:icon="@drawable/icon_b"
+            android:title="before"/>
+        <item
+            android:id="@+id/icon_c"
+            android:icon="@drawable/icon_c"
+            android:title="card"/>
+        <item
+            android:id="@+id/icon_d"
+            android:icon="@drawable/icon_d"
+            android:title="dall"/>
+    </group>
+
+    <item
+        android:id="@+id/item5"
+        android:title="XYZ">
+        <menu>
+            <item
+                android:id="@+id/icon_x"
+                android:icon="@drawable/icon_x"
+                android:title="xor"/>
+            <item
+                android:id="@+id/icon_y"
+                android:icon="@drawable/icon_y"
+                android:title="yes"/>
+            <item
+                android:id="@+id/icon_z"
+                android:icon="@drawable/icon_z"
+                android:title="zone"/>
+        </menu>
+    </item>
+
+
+</menu>
+
+
+

@@ -1,4 +1,4 @@
-package com.toly1994.vvi_mds.v00_toolbar;
+package com.toly1994.vvi_mds.pkg1_toolbar_card;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -12,7 +12,7 @@ import com.toly1994.vvi_mds.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class V00_ToolBarActivity extends AppCompatActivity {
+public class V01_ToolBarActivity extends AppCompatActivity {
 
 
     @BindView(R.id.my_tb)
@@ -27,6 +27,9 @@ public class V00_ToolBarActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         setSupportActionBar(mMyTb);//不加这句无菜单!!!
+
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 //        setSupportActionBar(mMyTb2);//不加这句无菜单!!!
     }
 
@@ -41,20 +44,22 @@ public class V00_ToolBarActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.tab_add:
-                ToastUtil.showAtOnce(V00_ToolBarActivity.this, "tab_add");
-                return true;
+                ToastUtil.showAtOnce(V01_ToolBarActivity.this, "tab_add");
+                break;
 
-            case R.id.tab_mode_fixed:
-                ToastUtil.showAtOnce(V00_ToolBarActivity.this, "tab_mode_fixed");
+            case R.id.tab_about:
+                ToastUtil.showAtOnce(V01_ToolBarActivity.this, "about");
+                break;
+            case R.id.tab_before:
+                ToastUtil.showAtOnce(V01_ToolBarActivity.this, "defore");
+                break;
 
-                return true;
-
-            case R.id.tab_mode_scrollable:
-                ToastUtil.showAtOnce(V00_ToolBarActivity.this, "tab_mode_scrollable");
-
+            case android.R.id.home:
+                finish();
                 break;
         }
         return super.onOptionsItemSelected(item);
     }
+
 
 }

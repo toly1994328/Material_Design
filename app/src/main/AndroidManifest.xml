@@ -11,12 +11,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".v01_tab.V01_TabLayoutActivity">
+        <activity android:name=".pkg3_bnb_tab.V05_TabLayoutActivity">
 
         </activity>
 
 
-        <activity android:name=".v02_card.V02_CardViewActivity">
+        <activity android:name=".pkg1_toolbar_card.V02_CardViewActivity">
 
         </activity>
 
@@ -25,7 +25,7 @@
         <!--</activity>-->
 
         <activity
-            android:name=".v03_palette.V02_PaletteActivity"
+            android:name=".pkg5_coll_palette.V07_CollapsingPaletteActivity"
             android:theme="@style/TranslucentTheme">
         </activity>
 
@@ -38,13 +38,19 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ac.V03_ACActivity"/>
-        <activity android:name=".v00_toolbar.V00_ToolBarActivity"
-                  android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".pkg4_app_coo.V06_ACActivity"/>
+        <activity
+            android:name=".pkg1_toolbar_card.V01_ToolBarActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
         </activity>
-        <activity android:name=".v04_behavior.V04_BehaviorActivity"/>
-        <activity android:name=".fab_sna.FabSnaBsX3Activity"/>
+        <activity android:name=".pkg7_behavior.V09_BehaviorActivity"/>
+        <activity android:name=".pkg2_fab_sna_sheet.V03_FabSnaBsX3Activity"/>
+        <activity
+            android:name=".pkg6_drawer_nav_input.V08_DrawerNavigationTextInputActivity"
+            android:theme="@style/LoginTheme">
+        </activity>
+        <activity android:name=".pkg3_bnb_tab.V04_BottomNavigationBarActivity"/>
     </application>
 
 </manifest>

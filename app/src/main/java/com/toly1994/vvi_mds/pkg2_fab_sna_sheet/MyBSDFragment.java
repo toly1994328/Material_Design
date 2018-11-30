@@ -1,4 +1,4 @@
-package com.toly1994.vvi_mds.fab_sna;
+package com.toly1994.vvi_mds.pkg2_fab_sna_sheet;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;

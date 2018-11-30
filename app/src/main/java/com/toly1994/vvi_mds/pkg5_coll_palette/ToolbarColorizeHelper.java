@@ -1,4 +1,4 @@
-package com.toly1994.vvi_mds.app;
+package com.toly1994.vvi_mds.pkg5_coll_palette;
 
 import android.app.Activity;
 import android.graphics.PorterDuff;
@@ -17,17 +17,14 @@ import com.toly1994.vvi_mds.R;
 import java.util.ArrayList;
 
 
-/**
- * Helper class that iterates through Toolbar views, and sets dynamically icons and texts color
- */
 public class ToolbarColorizeHelper {
 
     /**
-     * Use this method to colorize toolbar icons to the desired target color
+     * 修正Toolbar颜色
      *
-     * @param toolbarView       toolbar view being colored
-     * @param toolbarIconsColor the target color of toolbar icons
-     * @param activity          reference to activity needed to register observers
+     * @param toolbarView       toolbar
+     * @param toolbarIconsColor 修正色
+     * @param activity          activity
      */
     public static void colorizeToolbar(Toolbar toolbarView, int toolbarIconsColor, Activity activity) {
         final PorterDuffColorFilter colorFilter = new PorterDuffColorFilter(toolbarIconsColor, PorterDuff.Mode.SRC_IN);
@@ -37,28 +34,19 @@ public class ToolbarColorizeHelper {
 
             //第一步：修改返回按钮颜色（或者是抽屉按钮）
             if (v instanceof ImageButton) {
-                //Action Bar back button
                 ((ImageButton) v).getDrawable().setColorFilter(colorFilter);
             }
-
-            //第一步：修改 ActionMenuView 按钮颜色，text、back icon、overflow 除外的 icons 颜色
+            //第二步：修改 ActionMenuView 按钮颜色，text、back icon、overflow 除外的 icons 颜色
             if (v instanceof ActionMenuView) {
                 for (int j = 0; j < ((ActionMenuView) v).getChildCount(); j++) {
-
                     final View innerView = ((ActionMenuView) v).getChildAt(j);
                     if (innerView instanceof ActionMenuItemView) {
                         for (int k = 0; k < ((ActionMenuItemView) innerView).getCompoundDrawables().length; k++) {
                             if (((ActionMenuItemView) innerView).getCompoundDrawables()[k] != null) {
                                 final int finalK = k;
 
-                                //Important to set the color filter in separate thread, by adding it to the message queue
-                                //Won't work otherwise.
-                                innerView.post(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        ((ActionMenuItemView) innerView).getCompoundDrawables()[finalK].setColorFilter(colorFilter);
-                                    }
-                                });
+                                innerView.post(() -> ((ActionMenuItemView) innerView)
+                                        .getCompoundDrawables()[finalK].setColorFilter(colorFilter));
                             }
                         }
                     }
@@ -68,7 +56,6 @@ public class ToolbarColorizeHelper {
             //第三步：修改 Title、Subtitle 的颜色
             toolbarView.setTitleTextColor(toolbarIconsColor);
             toolbarView.setSubtitleTextColor(toolbarIconsColor);
-
             ///第四步：修改 OverFlow Menu Icon 的颜色
             setOverflowButtonColor(activity, colorFilter);
         }
@@ -78,7 +65,7 @@ public class ToolbarColorizeHelper {
      * It's important to set overflowDescription atribute in styles, so we can grab the reference
      * to the overflow icon. Check: res/values/styles.xml
      *
-     * @param activity context object
+     * @param activity    context object
      * @param colorFilter 颜色过滤器
      */
     private static void setOverflowButtonColor(final Activity activity, final PorterDuffColorFilter colorFilter) {

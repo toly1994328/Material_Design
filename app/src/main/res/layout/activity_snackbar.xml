@@ -6,13 +6,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/id_rv_fab"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v7.widget.RecyclerView>
+
     <include layout="@layout/sheet_4"/>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_gravity="bottom|end"
+        android:layout_gravity="bottom"
         android:layout_margin="10dp"
         android:backgroundTint="@color/jietelan"
         android:clickable="true"
@@ -21,7 +27,9 @@
         app:borderWidth="@dimen/dp_4"
         app:elevation="@dimen/dp_8"
         app:fabSize="normal"
+        app:layout_behavior="com.toly1994.vvi_mds.pkg2_fab_sna_sheet.FabFollowListBehavior"
         app:pressedTranslationZ="@dimen/dp_16"
+        app:layout_anchor="@id/id_tv_anchor"
         app:rippleColor="@color/yase"/>
 </android.support.design.widget.CoordinatorLayout>
 

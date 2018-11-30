@@ -1,4 +1,4 @@
-package com.toly1994.vvi_mds.ac;
+package com.toly1994.vvi_mds.pkg4_app_coo;
 
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
@@ -14,7 +14,7 @@ import com.toly1994.vvi_mds.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class V03_ACActivity extends AppCompatActivity {
+public class V06_ACActivity extends AppCompatActivity {
 
     @BindView(R.id.abl_top)
     AppBarLayout mAlTitle;
@@ -22,7 +22,6 @@ public class V03_ACActivity extends AppCompatActivity {
     RecyclerView mRvContent;
     @BindView(R.id.id_tv_moving)
     TextView mIdTvMoving;
-    private float mTextSize;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

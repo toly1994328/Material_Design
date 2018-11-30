@@ -28,13 +28,19 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         mData.add(R.mipmap.md_toolbar);
-        mData.add(R.mipmap.md_tablayout);
         mData.add(R.mipmap.md_cardview);
 
-        mData.add(R.mipmap.ac);
-        mData.add(R.mipmap.collapsingtoolbarlayout_palette);
-        mData.add(R.mipmap.md_behavior);
         mData.add(R.mipmap.fsb);
+
+        mData.add(R.mipmap.md_bnb);
+        mData.add(R.mipmap.md_tablayout);
+
+        mData.add(R.mipmap.ac);
+
+        mData.add(R.mipmap.collapsingtoolbarlayout_palette);
+
+        mData.add(R.mipmap.md_dnt);
+        mData.add(R.mipmap.md_behavior);
 
         setContentView(R.layout.activity_home);
 

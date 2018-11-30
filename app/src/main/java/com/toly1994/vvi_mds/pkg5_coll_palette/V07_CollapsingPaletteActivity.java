@@ -1,4 +1,4 @@
-package com.toly1994.vvi_mds.v03_palette;
+package com.toly1994.vvi_mds.pkg5_coll_palette;
 
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -16,15 +16,13 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.toly1994.test.common.TextHelper;
-import com.toly1994.test.compat.CompatNavigationBar;
 import com.toly1994.vvi_mds.R;
-import com.toly1994.vvi_mds.app.ToolbarColorizeHelper;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
-public class V02_PaletteActivity extends AppCompatActivity {
+public class V07_CollapsingPaletteActivity extends AppCompatActivity {
 
     @BindView(R.id.id_tv_content)
     TextView mIdTvContent;
@@ -41,7 +39,7 @@ public class V02_PaletteActivity extends AppCompatActivity {
         setContentView(R.layout.a3_palette);
         ButterKnife.bind(this);
         //适配虚拟键盘
-        CompatNavigationBar.handle(this);
+//        CompatNavigationBar.handle(this);
         setSupportActionBar(mToolbar);
         //显示返回按钮
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -61,12 +59,12 @@ public class V02_PaletteActivity extends AppCompatActivity {
         Palette.from(BitmapFactory.decodeResource(getResources(), res)).generate(
                 palette -> {
                     int color = palette.getDominantColor(
-                            ContextCompat.getColor(V02_PaletteActivity.this, R.color.blue));
+                            ContextCompat.getColor(V07_CollapsingPaletteActivity.this, R.color.blue));
                     int titleTextColor = palette.getDominantSwatch().getTitleTextColor();
                     ctl.setContentScrimColor(color);//设置toolBar颜色
                     ctl.setCollapsedTitleTextColor(titleTextColor);
                     ctl.setExpandedTitleColor(titleTextColor);
-                    ToolbarColorizeHelper.colorizeToolbar(mToolbar, titleTextColor, V02_PaletteActivity.this);
+                    ToolbarColorizeHelper.colorizeToolbar(mToolbar, titleTextColor, V07_CollapsingPaletteActivity.this);
                 }
         );
     }

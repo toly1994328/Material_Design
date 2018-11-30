@@ -1,8 +1,11 @@
 <resources>
     <string name="app_name">VVI_MDs</string>
-    <string name="behavior_first">com.toly1994.vvi_mds.v04_behavior.FirstBehavior</string>
+    <string name="behavior_first">com.toly1994.vvi_mds.pkg7_behavior.FirstBehavior</string>
+    <string name="behavior_second">com.toly1994.vvi_mds.pkg7_behavior.SecondBehavior</string>
+
     <string name="snow">北国风光，\n千里冰封，\n万里雪飘。\n望长城内外，\n惟余莽莽；\n大河上下，\n顿失滔滔。\n山舞银蛇，\n原驰蜡象，\n欲与天公试比高。(原驰 原作：原驱)\n须晴日，\n看红装素裹，\n分外妖娆。(红装 一作：银装)\n江山如此多娇，\n引无数英雄竞折腰。\n惜秦皇汉武，\n略输文采；\n唐宗宋祖，\n稍逊风骚。\n一代天骄，\n成吉思汗，\n只识弯弓射大雕。\n俱往矣，\n数风流人物，\n还看今朝。</string>
     <string name="poem1">
+        作者：张风捷特烈\n
         一\n
 
 \n海的女王曾这样许诺：\n
@@ -85,4 +88,6 @@
 那是海之子，化为的海洋。\n
 海中的鹿，\n
 是又一次的沉睡，还是已经消亡！\n</string>
+    <string name="str_open">open</string>
+    <string name="str_close">close</string>
 </resources>

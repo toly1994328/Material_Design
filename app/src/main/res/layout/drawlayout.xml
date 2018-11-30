@@ -1,0 +1,52 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/id_tb_top"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/yuebai"
+        app:title="Toly">
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/id_dl_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- 普通布局 -->
+        <include layout="@layout/in_draw_content"/>
+
+        <!-- 左侧滑布局 -->
+        <include layout="@layout/in_draw_left_navigation">
+
+        </include>
+
+        <!-- 右侧滑布局 -->
+        <LinearLayout
+            android:id="@+id/id_ll_right"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:background="@color/yase"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="右侧菜单"
+                android:textColor="@android:color/white"
+                android:textSize="30sp"/>
+        </LinearLayout>
+    </android.support.v4.widget.DrawerLayout>
+</LinearLayout>
+
+
+
