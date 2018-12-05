@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/abl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/id_tv_moving"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/menu_bg"
+            android:text="Flag"
+            app:layout_scrollFlags="scroll"/>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <TextView
+        android:id="@+id/hide"
+        style="@style/TVTestCenter"
+        android:background="@color/yase"
+        android:text="Find Me"
+        app:layout_scrollFlags="scroll"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/behavior_img_bigger"/>
+
+</android.support.design.widget.CoordinatorLayout>

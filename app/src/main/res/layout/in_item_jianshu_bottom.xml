@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="15dp"
+    android:layout_marginTop="6dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/id_item_article_title"
+    tools:showIn="@layout/item_jianshu_article">
+
+    <ImageView
+        android:id="@+id/id_item_article_see"
+        android:layout_width="@dimen/little_icon_size"
+        android:layout_height="@dimen/little_icon_size"
+        android:src="@drawable/icon_eye"
+        android:tint="@color/little_icon_color"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/id_item_article_see_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="2000"
+        android:textSize="@dimen/small_txt_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/id_item_article_see"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/id_item_article_comm"
+        android:layout_width="@dimen/little_icon_size"
+        android:layout_height="@dimen/little_icon_size"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/icon_comm"
+        android:tint="@color/little_icon_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/id_item_article_see_num"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/id_item_article_num"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="2000"
+        android:textSize="@dimen/small_txt_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/id_item_article_comm"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <ImageView
+
+        android:id="@+id/id_item_article_love"
+        android:layout_width="@dimen/little_icon_size"
+        android:layout_height="@dimen/little_icon_size"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/icon_love"
+        android:tint="@color/little_icon_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/id_item_article_num"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="2000"
+        android:textSize="@dimen/small_txt_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/id_item_article_love"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

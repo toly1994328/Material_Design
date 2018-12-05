@@ -14,8 +14,8 @@
             android:id="@+id/id_tv_moving"
             style="@style/TVTestCenter"
             android:background="@color/feise"
-            android:text="Flag"
-            app:layout_scrollFlags="scroll|snap"/>
+            app:layout_scrollFlags="scroll"
+            android:text="Flag"/>
     </android.support.design.widget.AppBarLayout>
 
 
@@ -30,6 +30,7 @@
         android:id="@+id/rv_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/behavior_first"/>
+        app:layout_behavior="@string/behavior_first"
+        />
 
 </android.support.design.widget.CoordinatorLayout>

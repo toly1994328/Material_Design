@@ -17,11 +17,11 @@ public class Xml2Adapter {
     @Test
     public void main() {
         //你的布局xml所在路径
-        File file = new File("I:\\Java\\Android\\Unit\\B\\asyn\\src\\main\\res\\layout\\item_list_pic.xml");
+        File file = new File("I:\\Java\\Android\\APL\\VVI_MDs\\test\\src\\main\\res\\layout\\item_img_txt.xml");
         //你的Adapter的java类放在哪个包里
-        File out = new File("I:\\Java\\Android\\Unit\\B\\asyn\\src\\main\\java\\com\\toly1994\\app");
+        File out = new File("I:\\Java\\Android\\APL\\VVI_MDs\\app\\src\\main\\java\\com\\toly1994\\vvi_mds\\pkg_08_other\\adapter");
         //你的Adapter的名字--不要加.java
-        String name = "TolyAdapter";
+        String name = "GridAdapter";
         initView(file, out, name);
     }
 
@@ -143,8 +143,7 @@ public class Xml2Adapter {
         sb.append("public class " + name + " extends RecyclerView.Adapter<" + name + ".MyViewHolder> {\n");
         sb.append("private Context mContext;\n");
         sb.append("private List<String> mData;\n");
-        sb.append("public " + name + "(Context context, List<String> data) {\n" +
-                "    mContext = context;\n" +
+        sb.append("public " + name + "(List<String> data) {\n" +
                 "    mData = data;\n" +
                 "}");
 
@@ -152,21 +151,29 @@ public class Xml2Adapter {
         sb.append("@NonNull\n" +
                 "@Override\n" +
                 "public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {\n" +
+                "mContext = parent.getContext();\n" +
                 "    View view = LayoutInflater.from(mContext).inflate(R.layout." + layoutId + ", parent, false);\n" +
                 "    return new MyViewHolder(view);\n" +
                 "}\n");
 
         sb.append("@Override \n" +
-                "public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {\n");
+                "public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {\n" +
+                "String str = mData.get(position);"
+        );
 
         map.forEach((id, view) -> {
+
+            if (view.contains("\n")) {
+                view = view.split("\n")[0];
+            }
+
             if ("Button".equals(view)) {
                 sb.append("holder." + formatId2Field(id) + ".setOnClickListener(v -> {\n" +
                         "        });\n");
             }
 
             if ("TextView".equals(view)) {
-                sb.append("holder." + formatId2Field(id) + ".setText(\"\");\n");
+                sb.append("holder." + formatId2Field(id) + ".setText(str);\n");
             }
             if ("ImageView".equals(view)) {
                 sb.append("holder." + formatId2Field(id) + ".setImageBitmap(null);\n");
@@ -190,7 +197,12 @@ public class Xml2Adapter {
         StringBuilder sb = new StringBuilder();
         sb.append("class MyViewHolder extends RecyclerView.ViewHolder {\r\n");
         map.forEach((id, view) -> {
-            sb.append("public ").append(view).append(" ").append(formatId2Field(id)).append(";").append("\r\n");
+            if (view.contains("\n")) {
+                view = view.split("\n")[0];
+            }
+
+            sb.append("public ").append(view).append(" ")
+                    .append(formatId2Field(id)).append(";").append("\r\n");
         });
 
         sb.append("public MyViewHolder(View itemView) {\n" +

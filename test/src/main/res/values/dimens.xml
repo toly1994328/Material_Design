@@ -27,6 +27,7 @@
     <dimen name="dp_4">4dp</dimen>
     <dimen name="dp_8">8dp</dimen>
     <dimen name="dp_16">16dp</dimen>
+    <dimen name="dp_20">20dp</dimen>
     <dimen name="dp_24">24dp</dimen>
     <dimen name="dp_32">32dp</dimen>
     <dimen name="dp_48">48dp</dimen>
@@ -42,5 +43,20 @@
     <dimen name="sp_18">18sp</dimen>
 
     <dimen name="px_1">1px</dimen>
+
+    <!--简书条目-->
+    <dimen name="little_icon_size">15dp</dimen>
+    <dimen name="little_txt_size">10sp</dimen>
+    <dimen name="dp_280">280dp</dimen>
+
+    <!--简书-->
+    <dimen name="default_icon_size">40dp</dimen>
+    <dimen name="item_iv_size">80dp</dimen>
+    <dimen name="item_txt_max_width">235dp</dimen>
+    <dimen name="small_txt_size">10sp</dimen>
+
+    <!--qq-->
+    <dimen name="item_qq_msg_iv_size">40dp</dimen>
+
 
 </resources>

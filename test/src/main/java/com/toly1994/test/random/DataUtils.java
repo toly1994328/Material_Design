@@ -1,4 +1,4 @@
-package com.toly1994.test.common;
+package com.toly1994.test.random;
 
 import android.content.Context;
 import android.widget.TextView;
@@ -33,6 +33,22 @@ public class DataUtils {
         ArrayList<String> names = new ArrayList<>();
         for (int i = 0; i < len; i++) {
             names.add(cn ? ZRandom.randomCnName() : ZRandom.randomEnName());
+        }
+        return names;
+    }
+
+    /**
+     * 返回字符集合
+     *
+     * @param len 个数
+     * @param max  最大字符个数
+     * @return 返回姓名集合
+     */
+    public static ArrayList<String> getRandomChar(int len, int max) {
+
+        ArrayList<String> names = new ArrayList<>();
+        for (int i = 0; i < len; i++) {
+            names.add(ZRandom.randomChar(max));
         }
         return names;
     }

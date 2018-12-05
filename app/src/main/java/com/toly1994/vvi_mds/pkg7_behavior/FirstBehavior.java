@@ -23,7 +23,8 @@ public class FirstBehavior extends CoordinatorLayout.Behavior<View> {
     }
 
     /**
-     * 确定dependency的View类型
+     * 确定使用Behavior的View要依赖的View的类型：
+     * 返回false：onDependentViewChanged不触发
      *
      * @param parent     CoordinatorLayout布局容器
      * @param child      装载behavior的控件

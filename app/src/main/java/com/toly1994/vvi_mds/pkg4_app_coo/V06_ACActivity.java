@@ -8,7 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.widget.TextView;
 
 import com.toly1994.test.common.ColUtils;
-import com.toly1994.test.common.DataUtils;
+import com.toly1994.test.random.DataUtils;
 import com.toly1994.vvi_mds.R;
 
 import butterknife.BindView;

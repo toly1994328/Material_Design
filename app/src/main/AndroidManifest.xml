@@ -32,11 +32,7 @@
         <activity
             android:name=".app.home.HomeActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
         <activity android:name=".pkg4_app_coo.V06_ACActivity"/>
         <activity
@@ -51,6 +47,25 @@
             android:theme="@style/LoginTheme">
         </activity>
         <activity android:name=".pkg3_bnb_tab.V04_BottomNavigationBarActivity"/>
+        <activity android:name=".pkg7_behavior.V10_BehaviorActivity"/>
+        <activity android:name=".pkg7_behavior.V11_BehaviorActivity"/>
+        <activity android:name=".pkg_08_other.V012_SwipeRefreshActivity"/>
+        <activity android:name=".pkg_08_other.V012_GoodsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".pkg_08_other.V012_GridActivity">
+
+        </activity>
+        <activity android:name=".pkg_08_other.V012_ChatActivity">
+
+        </activity>
+        <activity android:name=".pkg_08_other.V012_QQMsgActivity">
+
+        </activity>
     </application>
 
 </manifest>

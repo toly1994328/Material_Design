@@ -14,16 +14,17 @@ import com.toly1994.test.L;
  * 邮箱：1981462002@qq.com<br/>
  * 说明：最简单的behavior
  */
-public class SecondBehavior extends CoordinatorLayout.Behavior<View> {
+public class BiggerImgBehavior extends CoordinatorLayout.Behavior<View> {
 
     private float curY;
 
-    public SecondBehavior(Context context, AttributeSet attrs) {
+    public BiggerImgBehavior(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
     /**
-     * 确定dependency的View类型
+     * 确定使用Behavior的View要依赖的View的类型：
+     * 返回false：onDependentViewChanged不触发
      *
      * @param parent     CoordinatorLayout布局容器
      * @param child      装载behavior的控件
@@ -58,11 +59,17 @@ public class SecondBehavior extends CoordinatorLayout.Behavior<View> {
         L.d(faction + L.l());
 //        dependency.setTranslationY(-dependency.getTop());//让dependency不移动
 
-        dependency.setPivotX(dependency.getWidth()/2);//旋转
-        dependency.setPivotY(dependency.getHeight()/2);
-        dependency.setRotation(360 * faction);//旋转
-
-        child.setTranslationY(-curY);
+//        dependency.setPivotX(dependency.getWidth()/2);//旋转
+//        dependency.setPivotY(dependency.getHeight()/2);
+//        dependency.setRotation(360 * faction);//旋转
+        if (dy < 0) {
+            dependency.setScaleX(1 - faction);
+            dependency.setScaleY(1 - faction);
+        } else {
+            dependency.setScaleX(1 + faction);
+            dependency.setScaleY(1 + faction);
+        }
+        dependency.setTranslationY(dy);
         curY = dependency.getY();//更新curY
         return true;
     }

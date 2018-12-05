@@ -20,6 +20,8 @@ import com.toly1994.vvi_mds.pkg4_app_coo.V06_ACActivity;
 import com.toly1994.vvi_mds.pkg5_coll_palette.V07_CollapsingPaletteActivity;
 import com.toly1994.vvi_mds.pkg6_drawer_nav_input.V08_DrawerNavigationTextInputActivity;
 import com.toly1994.vvi_mds.pkg7_behavior.V09_BehaviorActivity;
+import com.toly1994.vvi_mds.pkg7_behavior.V11_BehaviorActivity;
+import com.toly1994.vvi_mds.pkg_08_other.V012_SwipeRefreshActivity;
 
 import java.util.List;
 
@@ -73,6 +75,12 @@ public class HomeRVAdapter extends RecyclerView.Adapter<HomeRVAdapter.MyViewHold
                         break;
                     case 8:
                         mContext.startActivity(new Intent(mContext, V09_BehaviorActivity.class));
+                        break;
+                    case 9:
+                        mContext.startActivity(new Intent(mContext, V11_BehaviorActivity.class));
+                        break;
+                    case 10:
+                        mContext.startActivity(new Intent(mContext, V012_SwipeRefreshActivity.class));
                         break;
                 }
             }

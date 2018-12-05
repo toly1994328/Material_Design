@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="dp_20">20dp</dimen>
     <dimen name="default_text_size">18sp</dimen>
     <dimen name="default_sub_text_size">14sp</dimen>
+    <!--简书-->
     <dimen name="default_icon_size">40dp</dimen>
+    <dimen name="item_iv_size">80dp</dimen>
+    <dimen name="item_txt_max_width">235dp</dimen>
+    <dimen name="small_txt_size">10sp</dimen>
+
+    <!--qq-->
+    <dimen name="item_qq_msg_iv_size">40dp</dimen>
+
+
 </resources>

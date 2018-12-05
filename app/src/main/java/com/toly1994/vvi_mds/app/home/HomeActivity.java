@@ -41,6 +41,8 @@ public class HomeActivity extends AppCompatActivity {
 
         mData.add(R.mipmap.md_dnt);
         mData.add(R.mipmap.md_behavior);
+        mData.add(R.mipmap.md_behavior);
+        mData.add(R.mipmap.md_behavior);
 
         setContentView(R.layout.activity_home);
 

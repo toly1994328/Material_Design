@@ -1,13 +1,12 @@
 package com.toly1994.vvi_mds.pkg7_behavior;
 
 import android.os.Bundle;
-import android.support.design.widget.AppBarLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.TextView;
 
-import com.toly1994.test.common.DataUtils;
+import com.toly1994.test.random.DataUtils;
 import com.toly1994.vvi_mds.R;
 import com.toly1994.vvi_mds.pkg4_app_coo.ACAdapter;
 
@@ -16,8 +15,8 @@ import butterknife.ButterKnife;
 
 public class V09_BehaviorActivity extends AppCompatActivity {
 
-    @BindView(R.id.abl_top)
-    AppBarLayout mAlTitle;
+//    @BindView(R.id.abl_top)
+//    AppBarLayout mAlTitle;
     @BindView(R.id.rv_content)
     RecyclerView mRvContent;
     @BindView(R.id.id_tv_moving)

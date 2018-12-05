@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+        android:color="#8834C4F2"><!-- press和水波纹的颜色 -->
+    <item>
+        <shape
+            android:innerRadius="5dp"
+            android:shape="rectangle">
+            <solid android:color="@color/white"/>
+            <corners android:radius="1dp"/>
+        </shape>
+    </item>
+</ripple>

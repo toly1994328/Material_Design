@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/tab_add"
+        android:title="add"
+        android:icon="@drawable/icon_add"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/tab_remove"
+        android:title="about"
+        android:icon="@drawable/icon_remove"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/tab_refresh"
+        android:icon="@drawable/icon_refresh"
+        android:title="before"
+        app:showAsAction="always"/>
+</menu>

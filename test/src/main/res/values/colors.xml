@@ -15,6 +15,12 @@
     <color name="ksw_md_solid_disable">#FFFFFF</color>
     <color name="ksw_md_solid_checked_disable">#aaaaaa</color>
 
+    <!--简书条目-->
+
+    <color name="little_txt_color">#aaaaaa</color>
+    <color name="little_icon_color">#aaaaaa</color>
+
+
 
     <!--剪裁图片-->
     <color name="white_translucent">#AAFFFFFF</color>

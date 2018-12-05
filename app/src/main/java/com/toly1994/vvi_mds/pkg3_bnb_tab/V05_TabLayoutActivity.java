@@ -13,8 +13,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-import com.toly1994.test.common.DataUtils;
-import com.toly1994.test.common.ZRandom;
+import com.toly1994.test.random.DataUtils;
+import com.toly1994.test.random.ZRandom;
 import com.toly1994.vvi_mds.R;
 
 import java.util.ArrayList;

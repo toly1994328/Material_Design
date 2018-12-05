@@ -21,4 +21,12 @@
         <!--文字是否消失-->
         <attr name="z_pb_txt_gone" format="boolean"/>
     </declare-styleable>
+
+    <!--计数TextView-->
+    <declare-styleable name="CountTextView">
+        <attr name="z_ctv_font_size" format="reference|dimension"/>
+        <attr name="z_ctv_num" format="integer"/>
+        <attr name="z_bg_color" format="reference|color"/>
+        <attr name="z_txt_color" format="reference|color"/>
+    </declare-styleable>
 </resources>

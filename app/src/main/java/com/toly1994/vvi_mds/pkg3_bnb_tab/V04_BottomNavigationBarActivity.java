@@ -11,7 +11,7 @@ import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
 import com.toly1994.test.L;
 import com.toly1994.test.ToastUtil;
-import com.toly1994.test.common.DataUtils;
+import com.toly1994.test.random.DataUtils;
 import com.toly1994.vvi_mds.R;
 import com.toly1994.vvi_mds.pkg4_app_coo.ACAdapter;
 

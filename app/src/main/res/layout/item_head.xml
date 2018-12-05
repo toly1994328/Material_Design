@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/jietelan"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/id_item_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_200"
+        android:gravity="center"
+        android:background="?android:attr/selectableItemBackground"
+        android:orientation="vertical"
+        android:text="Type1"
+        android:textSize="@dimen/sp_18">
+    </TextView>
+</RelativeLayout>
+

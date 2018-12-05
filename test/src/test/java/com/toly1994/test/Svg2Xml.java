@@ -17,7 +17,7 @@ public class Svg2Xml {
 
     @Test
     public void svgDir() {
-        String dirPath = "E:\\Material\\MyUI\\#svg\\基础";
+        String dirPath = "E:\\Material\\MyUI\\#svg\\factory";
         svg2xmlFromDir(dirPath);
     }
 
