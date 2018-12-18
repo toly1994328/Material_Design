@@ -40,8 +40,7 @@ public class V012_GoodsActivity extends AppCompatActivity {
         //边线相关
 //        mIdRvGoods.addItemDecoration(new RVItemDivider(this, RVItemDivider.Type.HORIZONTAL,10,Color.BLACK));
 //        mIdRvGoods.addItemDecoration(new RVItemDivider(this, RVItemDivider.Type.HORIZONTAL));
-//        mIdRvGoods.addItemDecoration(new RVItemDivider(this, RVItemDivider.Type.BOTH,R.drawable.shape_div));
-//        mIdRvGoods.addItemDecoration(new RVItemDivider(this, RVItemDivider.Type.BOTH,10,Color.BLACK));
+
 
 //        //线性流
 //        mIdRvGoods.setLayoutManager(new LinearLayoutManager(this));

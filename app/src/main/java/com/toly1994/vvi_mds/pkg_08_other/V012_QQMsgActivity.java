@@ -1,5 +1,6 @@
 package com.toly1994.vvi_mds.pkg_08_other;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -10,7 +11,9 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
+import com.toly1994.test.L;
 import com.toly1994.test.ToastUtil;
 import com.toly1994.test.random.DataUtils;
 import com.toly1994.test.random.ZRandom;
@@ -26,7 +29,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class V012_QQMsgActivity extends AppCompatActivity {
-
+    private static final String TAG = "V012_QQMsgActivity";
     @BindView(R.id.id_rv_content)
     RecyclerView mIdRvContent;
     @BindView(R.id.id_srl)
@@ -52,8 +55,9 @@ public class V012_QQMsgActivity extends AppCompatActivity {
         setContentView(R.layout.a12_swipe_refresh);
         ButterKnife.bind(this);
 
-        mData = DataUtils.getRandomName(5, true);
-        mIdRvContent.addItemDecoration(new RVItemDivider(this, RVItemDivider.Type.BOTH));
+        mData = DataUtils.getRandomName(20, true);
+
+        mIdRvContent.addItemDecoration(new RVItemDivider(this, RVItemDivider.Type.HORIZONTAL, 1, Color.BLACK));
 //        mIdRvContent.addItemDecoration(new RVItemDivider(this, LinearLayoutManager.HORIZONTAL));
         mACAdapter = new QQRvAdapter(mData);
 
@@ -72,11 +76,33 @@ public class V012_QQMsgActivity extends AppCompatActivity {
         mIdRvContent.setAdapter(mACAdapter);
         mIdRvContent.setLayoutManager(new LinearLayoutManager(this));
 
-        //        //网格流：一排4个,竖直排列
-//        mIdRvGoods.setLayoutManager(
-//                new GridLayoutManager(this, 3, GridLayoutManager.VERTICAL, false));
-        //瀑布流：一排两个,竖直排列
+//        //        //网格流：一排4个,竖直排列
+//        mIdRvContent.setLayoutManager(
+//                new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false));
+//        //瀑布流：一排两个,竖直排列
 //        mIdRvContent.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
+
+        mIdRvContent.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+                ToastUtil.show(V012_QQMsgActivity.this, "newState:" + newState);
+            }
+
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+                L.d(dy + L.l());
+                boolean bottom = !recyclerView.canScrollVertically(1);
+                if (bottom) {
+                    TextView textView = new TextView(recyclerView.getContext());
+                    textView.setText(6666 + "");
+//                    mIdSrl.setRefreshing(true);
+//                    mHandler.sendEmptyMessageDelayed(0, 1000);
+                }
+
+            }
+        });
 
         srl();
     }
@@ -116,7 +142,9 @@ public class V012_QQMsgActivity extends AppCompatActivity {
                 mACAdapter.removeItem(3);
                 break;
             case R.id.tab_refresh:
-                mACAdapter.updateItem(4, "龙少");
+                mACAdapter.onItemMove(4, 0);
+
+
                 break;
         }
         return super.onOptionsItemSelected(item);

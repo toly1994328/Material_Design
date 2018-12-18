@@ -60,9 +60,10 @@ public class QQRvAdapter extends RecyclerView.Adapter<MyViewHolder> implements A
 
     @Override
     public void onItemMove(int from, int to) {
-        //交换位置
-        ToastUtil.showAtOnce(mContext, "已交换：" + mData.get(from) + "和" + mData.get(to) + "的位置");
         Collections.swap(mData, from, to);
+        if (to == 0) {
+            mRecyclerView.scrollToPosition(0);
+        }
         notifyItemMoved(from, to);//刷新移动数据---将不刷新position
     }
 

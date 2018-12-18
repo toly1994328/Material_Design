@@ -53,7 +53,7 @@ public class V012_SwipeRefreshActivity extends AppCompatActivity {
 //        mData = DataUtils.getRandomName(60, true);
         mData = DataUtils.getRandomChar(60, 60);
 
-        mIdRvContent.addItemDecoration(new RVItemDivider(this, RVItemDivider.Type.BOTH));
+        mIdRvContent.addItemDecoration(new RVItemDivider(this, RVItemDivider.Type.VERTICAL,R.drawable.shape_div));
 //        mACAdapter = new JianshuRvAdapter(mData);
         mACAdapter = new QQRvAdapter(DataUtils.getRandomName(5, true));
         //实例化ItemTouchHelper

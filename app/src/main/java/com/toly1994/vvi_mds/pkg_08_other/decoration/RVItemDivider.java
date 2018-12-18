@@ -9,7 +9,6 @@ import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-
 /**
  * 作者：张风捷特烈<br/>
  * 时间：2018/12/3 0003:10:36<br/>
@@ -21,7 +20,6 @@ public class RVItemDivider extends RecyclerView.ItemDecoration {
     public enum Type {
         VERTICAL,//竖直线
         HORIZONTAL,//水平线
-        BOTH;//水平+垂直
     }
 
     private Paint mPaint;//画笔
@@ -72,10 +70,13 @@ public class RVItemDivider extends RecyclerView.ItemDecoration {
     @Override
     public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
         super.getItemOffsets(outRect, view, parent, state);
-        if (mOrientation == Type.VERTICAL||mOrientation == Type.BOTH) {
-            outRect.set(0, 0, 0, mDividerHeight);//横线矩框
-        } else {
-            outRect.set(0, 0, mDividerHeight, 0);//竖线矩框
+        switch (mOrientation) {
+            case HORIZONTAL:
+                outRect.set(0, 0, 0, mDividerHeight);//横线矩框
+                break;
+            case VERTICAL:
+                outRect.set(0, 0, mDividerHeight, 0);//横线矩框
+
         }
     }
 
@@ -91,10 +92,6 @@ public class RVItemDivider extends RecyclerView.ItemDecoration {
         super.onDraw(canvas, parent, state);
 
         switch (mOrientation) {
-            case BOTH:
-                drawVertical(canvas, parent);//竖线矩框
-                drawHorizontal(canvas, parent);//横线矩框
-                break;
             case VERTICAL:
                 drawVertical(canvas, parent);//竖线矩框
                 break;

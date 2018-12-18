@@ -5,27 +5,28 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.content.ContextCompat;
-import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.graphics.Palette;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.WindowManager;
 import android.widget.ImageView;
-import android.widget.ScrollView;
-import android.widget.TextView;
 
-import com.toly1994.test.common.TextHelper;
+import com.toly1994.test.random.DataUtils;
 import com.toly1994.vvi_mds.R;
+import com.toly1994.vvi_mds.pkg4_app_coo.ACAdapter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
 public class V07_CollapsingPaletteActivity extends AppCompatActivity {
-
-    @BindView(R.id.id_tv_content)
-    TextView mIdTvContent;
+    @BindView(R.id.rv_content)
+    RecyclerView mRvContent;
+//    @BindView(R.id.id_tv_content)
+//    TextView mIdTvContent;
     @BindView(R.id.tb_toolbar)
     Toolbar mToolbar;
     @BindView(R.id.iv_header)
@@ -44,15 +45,19 @@ public class V07_CollapsingPaletteActivity extends AppCompatActivity {
         //显示返回按钮
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        //处理一下ScrollView
-        ScrollView contentSv = findViewById(R.id.sv_content);
-        ViewCompat.setNestedScrollingEnabled(contentSv, true);
-        //设置字体---可无视
-        TextHelper.setFont(this, mIdTvContent, "fonts/ygyxsziti2.0.ttf");
+        ACAdapter ACAdapter = new ACAdapter(this, DataUtils.getRandomName(30, true));
+        mRvContent.setAdapter(ACAdapter);
+        mRvContent.setLayoutManager(new LinearLayoutManager(this));
 
-        mCTL = findViewById(R.id.ctl_toolbar);
-        mIvHeader.setImageResource(R.mipmap.menu_bg);
-        palette(R.mipmap.menu_bg, mCTL);
+        //处理一下ScrollView
+//        ScrollView contentSv = findViewById(R.id.sv_content);
+//        ViewCompat.setNestedScrollingEnabled(contentSv, true);
+        //设置字体---可无视
+//        TextHelper.setFont(this, mIdTvContent, "fonts/ygyxsziti2.0.ttf");
+
+//        mCTL = findViewById(R.id.ctl_toolbar);
+//        mIvHeader.setImageResource(R.mipmap.bg_android);
+//        palette(R.mipmap.bg_android, mCTL);
     }
 
     private void palette(int res, CollapsingToolbarLayout ctl) {

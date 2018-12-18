@@ -13,6 +13,7 @@
         android:layout_height="match_parent"/>
 
     <android.support.design.widget.FloatingActionButton
+        android:backgroundTint="@color/jietelan"
         android:id="@+id/id_fab_b"
         android:layout_width="50dp"
         android:layout_height="50dp"
